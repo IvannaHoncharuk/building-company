@@ -48,28 +48,26 @@ A modern, responsive website for a construction company built with React and Vit
 buildcraft-website/
 ├── client/                 # Frontend application
 │   ├── public/            # Static assets
-│   │   ├── src/
-│   │   │   ├── components/    # React components
-│   │   │   │   ├── Header.jsx
-│   │   │   │   ├── Hero.jsx
-│   │   │   │   ├── About.jsx
-│   │   │   │   ├── Services.jsx
-│   │   │   │   ├── Gallery.jsx
-│   │   │   │   ├── Contact.jsx
-│   │   │   │   └── Footer.jsx
-│   │   │   │   └── styles/        # SCSS styles
-│   │   │   │       ├── main.scss
-│   │   │   │       ├── _variables.scss
-│   │   │   │       └── _mixins.scss
-│   │   │   │   └── utils/         # Utility functions
-│   │   │   │       └── App.jsx        # Main app component
-│   │   │   │       └── main.jsx       # Entry point
-│   │   │   ├── package.json       # Frontend dependencies
-│   │   │   └── vite.config.js     # Vite configuration
-│   │   ├── package.json           # Root package.json
-│   │   └── README.md             # This file
-│   ├── package.json           # Root package.json
-│   └── README.md             # This file
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   │   ├── Header.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── About.jsx
+│   │   │   ├── Services.jsx
+│   │   │   ├── Gallery.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   └── Footer.jsx
+│   │   ├── styles/        # SCSS styles
+│   │   │   ├── main.scss
+│   │   │   ├── _variables.scss
+│   │   │   └── _mixins.scss
+│   │   ├── utils/         # Utility functions
+│   │   ├── App.jsx        # Main app component
+│   │   └── main.jsx       # Entry point
+│   ├── package.json       # Frontend dependencies
+│   └── vite.config.js     # Vite configuration
+├── package.json           # Root package.json
+└── README.md             # This file
 ```
 
 ## 🛠️ Available Scripts
