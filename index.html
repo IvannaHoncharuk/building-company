@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildCraft - Construction Company</title>
+    <meta
+      name="description"
+      content="Professional construction services with over 15 years of experience"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.6;
+        color: #ffffff;
+        background-color: #121212;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+            135deg,
+            rgba(18, 18, 18, 0.8),
+            rgba(18, 18, 18, 0.6)
+          ),
+          url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")
+            center/cover;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      .hero-title .highlight {
+        color: #ff6b35;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #ff6b35, #e55a2b);
+        color: white;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .stat-item h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ff6b35;
+        margin-bottom: 8px;
+      }
+
+      .stat-item p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        background: linear-gradient(135deg, #ff6b35, #e55a2b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        color: #cccccc;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .about {
+        background: #1a1a1a;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .about-text h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+
+      .about-text p {
+        font-size: 1.1rem;
+        color: #cccccc;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: #1a1a1a;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #333333;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-color: #ff6b35;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #ffffff;
+      }
+
+      .service-card p {
+        color: #cccccc;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .footer {
+        background: #0a0a0a;
+        padding: 60px 0 30px;
+        color: #cccccc;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-stats {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Building Dreams Into
+            <span class="highlight"> Reality</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Professional construction services with over 15 years of experience.
+            From residential to commercial projects, we deliver quality and
+            excellence.
+          </p>
+
+          <a href="#contact" class="btn"> Get Free Quote </a>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>500+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About BuildCraft</h2>
+          <p>Your trusted partner in construction excellence</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Building Excellence Since 2008</h3>
+            <p>
+              BuildCraft has been at the forefront of the construction industry
+              for over 15 years, delivering exceptional quality and innovative
+              solutions for both residential and commercial projects.
+            </p>
+            <p>
+              We specialize in modern construction techniques, sustainable
+              building practices, and cutting-edge technology to ensure your
+              project is completed on time, within budget, and exceeds your
+              expectations.
+            </p>
+          </div>
+
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+              alt="Construction team working"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>
+            Comprehensive construction solutions for all your building needs
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Residential Construction</h3>
+            <p>
+              Custom homes and residential projects built to your specifications
+              with quality craftsmanship and attention to detail.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Commercial Construction</h3>
+            <p>
+              Complete commercial building solutions from office complexes to
+              retail spaces with modern design and functionality.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Renovation & Remodeling</h3>
+            <p>
+              Transform your existing space with our renovation expertise, from
+              interior updates to structural modifications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 BuildCraft Construction Company. All rights reserved.</p>
+        <p>Contact: info@buildcraft.com | Phone: +1 (555) 123-4567</p>
+      </div>
+    </footer>
+  </body>
+</html>
