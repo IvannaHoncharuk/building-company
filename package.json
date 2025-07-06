@@ -1,0 +1,20 @@
+{
+  "name": "buildcraft-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for a construction company",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "preview": "cd client && npm run preview",
+    "install-deps": "cd client && npm install"
+  },
+  "keywords": [
+    "construction",
+    "website",
+    "react",
+    "vite"
+  ],
+  "author": "Ivanna Honcharuk",
+  "license": "MIT"
+}
